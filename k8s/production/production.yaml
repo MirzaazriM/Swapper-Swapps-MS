@@ -1,0 +1,29 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata: 
+  name: swapper-swapps-backend-production
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: backend
+      labels:
+        app: swapper-swapps
+        role: backend
+        env: production
+    spec: 
+      containers:
+      - name: backend
+        image: gcr.io/cloud-solutions-images/swapper-swapps:1.0.0
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "100m"
+        imagePullPolicy: Always
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+        ports:
+        - name: backend
+          containerPort: 80

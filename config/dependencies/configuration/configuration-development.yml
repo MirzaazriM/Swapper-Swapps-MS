@@ -1,0 +1,9 @@
+parameters:
+
+        database.dsn: 'mysql:host=localhost;dbname=Swapper'
+        
+        config:
+            mobile_url: 'swapper-mobile:8888'
+            system_url: 'swapper-system:8888'
+            users_url: 'http://swapper-users.192.168.0.23.xip.io:8888'
+            elastic_search_url: 'http://35.239.217.91:9200'

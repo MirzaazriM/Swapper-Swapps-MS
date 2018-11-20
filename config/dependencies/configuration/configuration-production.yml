@@ -1,0 +1,8 @@
+parameters:
+
+        database.dsn: 'mysql:host=35.232.122.60;dbname=Swapper'
+        
+        config:
+            mobile_url: 'api.mobile.swapper.org.uk'
+            system_url: 'api.system.swapper.org.uk'
+            elastic_search_url: 'http://35.239.217.91:9200'
